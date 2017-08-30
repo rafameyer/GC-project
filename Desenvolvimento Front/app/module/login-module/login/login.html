@@ -1,0 +1,80 @@
+<style> 
+    .input-field input:focus + label {
+        color: #337ab7 !important;
+    }
+    /* label underline focus color */
+    .row .input-field input:focus {
+        border-bottom: 1px solid #337ab7 !important;
+        box-shadow: 0 1px 0 0 #337ab7 !important;
+    }
+    body {
+        background-color: #337ab7  ;
+    }
+    .box-login {
+        width: 30%;
+        text-align: center;
+        padding-top: 75px;
+        z-index: 9999;
+    }
+    .card {
+        height: 500px;
+    }
+    .img-logo {
+        width: 250px;
+    }
+    .btn-submit-login {
+        width: 100%;
+        margin-top: 15px;
+    }
+    .btn-recuperar-senha {
+        margin-top: 15px;
+        color: #9e9e9e !important;
+    }
+    .cor-padrao {
+        background-color: #337ab7;
+    }
+    .cor-padrao a:focus {
+        background-color: #337ab7;
+    }
+    .btn:hover, .btn-large:hover {
+        background-color: #337ab7;
+    }
+    @media only screen and (max-width: 1024px) {
+        .box-login {
+            width: 70%;
+        }
+    }
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+        text-transform: none;
+    }
+</style>
+<div class="page-header">
+    <div class="container box-login">
+        <div align="center">
+            <div class="card">
+                <div class="card-content">
+                    <a href="">
+                        <i class="material-icons tooltipped" aria-hidden="true" style="float: right;" data-position="bottom" data-delay="50" data-tooltip="Retornar à página anterior">close</i>                  
+                    </a>
+                    <div style="padding: 20px">
+                        <h5 style="color: #337ab7;">Plataforma de Diagnóstico em <br> GC nas Organizações</h5>
+                        <p><i>desenvolvido no PGCCO da UniCesumar</i></p>
+                    </div>
+                </div>
+                <div class="card-action"> 
+                    <div class="input-field col s12">
+                        <input id="first_name" ng-model="user" type="text" class="validate" required>
+                        <label for="first_name">Usuário</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="password" ng-model="pass" type="password" class="validate" required>
+                        <label for="password">Senha</label>
+                    </div>
+                    <a href="cadastrar_organizacoes.html" class="waves-effect waves-light btn btn-submit-login cor-padrao" ng-click="submitLogin(user, pass)">ENTRAR</a>
+                    <a href="/recuperar-senha" class="waves-effect waves-teal btn-flat btn-recuperar-senha" ng-click="">Recuperar Senha</a>
+                </div>
+            </div>
+        </div>
+    </div>                
+</div>
+

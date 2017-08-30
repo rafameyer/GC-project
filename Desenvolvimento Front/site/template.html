@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Modelos</title>
+  
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style> 
+    body {
+      background-color: #eeeeee;
+    }
+    .input-field input:focus + label {
+      color: #337ab7 !important;
+    }
+    /* label underline focus color */
+    .row .input-field input:focus {
+      border-bottom: 1px solid #337ab7 !important;
+      box-shadow: 0 1px 0 0 #337ab7 !important;
+    }
+    .top {
+      background-color: white;
+      width: 100%;
+      height: 75px;
+    }
+    .inline li {
+      display: inline;
+      list-style-type: none;
+    }
+    .list-top {
+      margin-top: 26px;
+      font-size: 18px;
+    }
+    .list-top li a {
+      color: #035d90;
+      margin-right: 35px;
+    }
+    .list-top li i {
+      margin-top: 5px;
+    }
+    .menu-lateral li a {
+       color: #035d90; 
+    }
+    .secondary-content {
+        float: right;
+        color: #00649e;
+    }
+    .titulo-modulo h4 {
+        color: #00649e;
+    }
+    .create {
+      color: gray;
+    }
+    .delete {
+      color: red;
+    }
+    .eye {
+      color: green;
+    }
+    .row-pesquisar {
+      margin-top: 25px;
+      margin-bottom: 0px;
+    }
+    .input-pesquisar {
+      margin-left: 35px;
+      margin-right: 15px;
+      margin-top: -10px;
+      width: 45%;
+    }
+    .btn-pesquisar {
+      color: red;
+    }
+    .btn-add-org {
+      background-color: red;
+    }
+    .btn-pesquisar .btn:hover, .btn-large:hover {
+      background-color: red;
+    }
+    .btn-add-org .btn:hover, .btn-large:hover {
+      background-color: red;
+    }
+    .cd-org .active {
+      color: black !important;
+    }
+    #active {
+      color: black !important;      
+    }
+    .collapsible {
+      border-top: 1px solid #ddd;
+      border-right: none; 
+      border-left: none; 
+      margin: 0px; 
+    }
+    .padding-50 {
+      padding: 50px;
+    }
+    .padding-25 {
+      padding: 25px;
+    }
+    @media only screen and (max-width: 800px) {
+      #slide-out{
+        width: 27%;
+      }
+      .side-nav li > a {
+        padding: 0px;
+      }
+      img {
+        width: 150px;
+      }
+    }
+    @media only screen and (max-width: 1024px) {
+      #slide-out{
+        width: 27%;
+      }
+      .side-nav li > a {
+        padding: 15px;
+      }
+      img {
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <div class="padding-50">
+      <h4>Cartões</h4>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Titulo</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Proin sed lorem et ex suscipit pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas pharetra nisl eros, in elementum ipsum iaculis id. Nulla ante velit, luctus quis sollicitudin eget, posuere non nisl. Suspendisse pellentesque pulvinar fringilla. Sed id egestas urna, sit amet iaculis neque. Proin at suscipit tellus. Cras a nibh purus.</p>
+            </div>
+            <div class="card-action">
+              <a href="#" style="color: red;">Botão 1</a>
+              <a href="#" style="color: red;">Botão 2</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="padding-50">
+      <h4>Collapsible</h4>
+       <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">filter_drama</i>Primeiro</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">place</i>Segundo</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">whatshot</i>Terceiro</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="padding-50">
+      <h4>Campos</h4>
+      <div class="row card padding-25">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="José de Carvalho" id="first_name" type="text" class="validate">
+                <label for="first_name">Primeiro Nome</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Último Nome</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                <label for="disabled">Desabilitado</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Senha</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">E-mail</label>
+              </div>
+            </div>
+          </form>
+        </div>
+    </div>
+
+    <div class="padding-50">
+      <h4>Botões</h4>
+      <div class="padding-25 card">
+        <div>
+          <a class="waves-effect waves-light btn">Nuvem</a>
+          <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Nuvem</a>
+          <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Nuvem</a>
+        </div>
+        <div class="row" style="margin-top: 45px">
+          Botão de adicionar
+          <a class="waves-effect waves-light btn" style="background-color: red"><i class="material-icons left">add</i>Adicionar</a>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/materialize.js"></script>
+    <script src="assets/js/init.js"></script>
+    <script>
+      $(document).ready(function(){
+        // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+      });
+    </script>
+    
+  </body>
+  </html>
+  

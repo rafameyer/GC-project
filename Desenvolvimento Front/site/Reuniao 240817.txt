@@ -1,0 +1,47 @@
+1. trocar a imagem por "Plataforma de Diagnóstico em GC nas Organizações desenvolvido no PGCCO da UniCesumar" está no e-mail.
+
+ok!!!
+
+2. Criar um link para sair do login e entrar no portal.
+Algo por ex: um "X" ou um "Cancelar".
+se caso do "X" topo lado direito
+no caso do cancelar: do lado do botão das oporações (esquerda).
+(para todas as telas)
+
+3. Recuperar senha: alinhado a direto.
+
+4. Tela 
+
+5. alterar o voltar com o  "?"
+
+6. trocar a seta por "X"
+
+7. Deixar o "?" mais proximo possivel do titulo da tela, no topo a direita.
+
+8. Colocar um ponto "?" no campo de digite a senha!
+
+9. Criar um tela do primeiro acesso!
+campos:
+1: atributos: senha e conf de senha.
+
+
+------------------
+Na tela recuperarSenha1 qnd clicar no "Enviar" abrir um popup,
+qnd clicar em OK entrar na tela de pagina inicial do sistema de apresentação(landing page).
+popup: dica ter um progress do retorno do serviço.
+
+--------------------
+
+Departamento cai fora!
+Exclir departamentos no menu lateral
+
+tela: Gerenciar Org
+1. colocar um checkbox de mostrar inf oculta
+2. trocar "delete (lata)" por "olho aberto verde" e "olho fechado vermelho".
+
+3. campos da org. 
+- nome, - email, - login, - btn cancelar, - btn enviar
+
+4. criar um popup para criar org. 
+- nome, - email, - login, - btn cancelar, - btn enviar
+

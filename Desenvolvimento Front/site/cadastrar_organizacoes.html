@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Tela Lista</title>
+  
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style> 
+    body {
+      background-color: #eeeeee;
+    }
+    .input-field input:focus + label {
+      color: #337ab7 !important;
+    }
+    /* label underline focus color */
+    .row .input-field input:focus {
+      border-bottom: 1px solid #337ab7 !important;
+      box-shadow: 0 1px 0 0 #337ab7 !important;
+    }
+    .top {
+      background-color: white;
+      width: 100%;
+      height: 75px;
+    }
+    .inline li {
+      display: inline;
+      list-style-type: none;
+    }
+    .list-top {
+      margin-top: 26px;
+      font-size: 18px;
+    }
+    .list-top li a {
+      color: #035d90;
+      margin-right: 35px;
+    }
+    .list-top li i {
+      margin-top: 5px;
+    }
+    .menu-lateral li a {
+       color: #035d90; 
+    }
+    .secondary-content {
+        float: right;
+        color: #00649e;
+    }
+    .titulo-modulo h4 {
+        color: #00649e;
+    }
+    .create {
+      color: gray;
+    }
+    .delete {
+      color: gray;
+    }
+    .eye {
+      color: green;
+    }
+    .row-pesquisar {
+      margin-top: 25px;
+      margin-bottom: 0px;
+    }
+    .input-pesquisar {
+      margin-left: 35px;
+      margin-right: 15px;
+      margin-top: -10px;
+      width: 45%;
+    }
+    .btn-pesquisar {
+      color:  #035d90;
+    }
+    .btn-add-org {
+      background-color:  #035d90;
+    }
+    .btn-pesquisar .btn:hover, .btn-large:hover {
+      background-color:  #035d90;
+    }
+    .btn-add-org .btn:hover, .btn-large:hover {
+      background-color: #035d90;
+    }
+    .cd-org .active {
+      color: black !important;
+    }
+    #active {
+      color: black !important;      
+    }
+    .collapsible {
+      border-top: 1px solid #ddd;
+      border-right: none; 
+      border-left: none; 
+      margin: 0px; 
+    }
+    @media only screen and (max-width: 800px) {
+      #slide-out{
+        width: 27%;
+      }
+      .side-nav li > a {
+        padding: 0px;
+      }
+      img {
+        width: 150px;
+      }
+    }
+    @media only screen and (max-width: 1024px) {
+      #slide-out{
+        width: 27%;
+      }
+      .side-nav li > a {
+        padding: 15px;
+      }
+      img {
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top z-depth-2">
+    <div style="float: right">
+      <ul class="inline list-top">
+        <li><a href="#!" class="waves-effect tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nome do usuário">Administrador Antonio</a></li>
+        <li><a href="#!" class="waves-effect tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair do Sistema">Sair</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s3" style="margin-left: 30px">
+      <header>
+        <ul id="slide-out" class="side-nav fixed menu-lateral" style="transform: none">
+          <div style="margin-top: 15px; margin-left: 15px">
+            <a href="index.html">
+              <i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="Voltar">arrow_back</i>
+            </a>  
+          </div>
+          <li>
+            <div class="user-view">
+              <div>
+                <img src="assets/img/semimg.jpeg" width="200px">
+              </div>
+            </div>
+          </li>
+          <li>
+            <hr>
+          </li>
+          <li><a class="subheader">MENU</a></li>
+          <li><a id="active" class="waves-effect" href="cadastrar_organizacoes.html">GERENCIAR ORGANIZAÇÕES</a></li>
+          <li><a class="waves-effect" href="#!">GERENCIAR QUESTIONÁRIO</a></li>  
+          <li>
+            <hr>
+          </li>
+          <li>
+            <div class="user-view">
+              <img src="assets/img/unicesumar.png" width="200px">  
+            </div>              
+          </li>          
+        </ul>
+      </header>
+    </div>
+    <div class="col s8">
+      <content>
+            <div class="row">
+              <div style="padding: 10px">
+                <div class="card s12">
+                  <ul class="collection with-header">
+                    <li class="collection-header titulo-modulo">
+                      <h4>ORGANIZAÇÕES</h4>
+                      <div id="modal1" class="modal">
+                        <div class="modal-content">
+                          <h4>Cadastro de Organização</h4>
+                          <p>A bunch of text</p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+                          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Confirmar</a>                          
+                        </div>
+                      </div>
+                    </li>
+                    <li style="margin-left: 32px">
+                      <div class="row row-pesquisar btn-pesquisar">
+                        <div class="s1">
+                          <div style="float: left"> 
+                            <a class="btn btn-add-org waves-effect waves-light" href=""><i class="material-icons">add</i>Organização</a>
+                          </div>
+                        </div>
+                        <div class="s6" style="width: 95%;">
+                          <div class="input-field input-pesquisar" style="float: left">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Pesquisar</label>
+                          </div>
+                          <div style="margin-left: -25px"> 
+                            <a class="btn btn-floating btn-large waves-effect waves-light" href="" style="width: 40px; height: 40px; background-color:  #035d90;"><i class="material-icons" style="line-height: 45px;">search</i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                       <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header">
+                            <ul>
+                              <li style="float: left">
+                                <div>ORGANIZAÇÃO 1</div>                                
+                              </li>
+                              <li style="float: right; padding-left: 500px">
+                                <i class="material-icons create tooltipped" data-position="bottom" data-delay="50" data-tooltip="Editar">create</i>
+                                <i class="material-icons delete tooltipped" data-position="bottom" data-delay="50" data-tooltip="Remover">delete</i>
+                                <i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="detalhar">arrow_drop_down</i>  
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="collapsible-body"><span>A Organização 1 é sobre....</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                   <li>
+                      <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header">
+                            <ul>
+                              <li style="float: left">
+                                <div>ORGANIZAÇÃO 2</div>                                
+                              </li>
+                              <li style="float: right; padding-left: 500px">
+                                <i class="material-icons create tooltipped" data-position="bottom" data-delay="50" data-tooltip="Editar">create</i>
+                                <i class="material-icons delete tooltipped" data-position="bottom" data-delay="50" data-tooltip="Remover">delete</i>
+                                <i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="detalhar">arrow_drop_down</i>  
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="collapsible-body"><span>A Organização 2 é sobre....</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header">
+                            <ul>
+                              <li style="float: left">
+                                <div>ORGANIZAÇÃO 3</div>                                
+                              </li>
+                              <li style="float: right; padding-left: 500px">
+                                <i class="material-icons create tooltipped" data-position="bottom" data-delay="50" data-tooltip="Editar">create</i>
+                                <i class="material-icons delete tooltipped" data-position="bottom" data-delay="50" data-tooltip="Remover">delete</i>
+                                <i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="detalhar">arrow_drop_down</i>  
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="collapsible-body"><span>A Organização 3 é sobre....</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </content>
+    </div>
+  </div>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/materialize.js"></script>
+    <script src="assets/js/init.js"></script>
+    <script>
+      $(document).ready(function(){
+        // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+      });
+    </script>
+    
+  </body>
+  </html>
+  

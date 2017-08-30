@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Recuperar Senha</title>
+  
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">  
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <style>
+    .input-field input:focus + label {
+    color: #337ab7 !important;
+    }
+    /* label underline focus color */
+    .row .input-field input:focus {
+      border-bottom: 1px solid #337ab7 !important;
+      box-shadow: 0 1px 0 0 #337ab7 !important;
+    } 
+    body {
+      background-color: #337ab7;
+    }
+    .box-login {
+      width: 30%;
+      text-align: center;
+      padding-top: 75px;
+      z-index: 9999;
+    }
+    .card {
+      height: 400px;
+    }
+    .img-logo {
+      width: 250px;
+    }
+    .btn-submit-enviar {
+      width: 100%;
+      margin-top: 50px;
+    }
+    .btn-recuperar-senha {
+        margin-top: 15px;
+        color: #9e9e9e !important;
+    }
+    .txt-recuperar {
+      color: gray;
+    }    
+    .cor-padrao {
+      background-color: #337ab7;
+    }
+    .cor-padrao a:focus {
+      background-color: #337ab7;
+    }
+    .pg-custom {
+      width: 94%;
+      background-color: lightgray;
+    }
+    .progress .determinate {
+      background-color: yellowgreen;
+      padding: 131px;
+    }
+    .btn:hover, .btn-large:hover {
+      background-color: #337ab7;
+    }
+    @media only screen and (max-width: 1024px) {
+      .box-login {
+        width: 70%;
+      }
+    }
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+      text-transform: none;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="container box-login">
+      <div class="row">
+        <div align="center">
+          <div class="card">
+            <div class="card-content txt-recuperar">
+              <a href="recuperar_senha.html">
+                <i class="material-icons" style="float: left;">arrow_back</i>  
+              </a>
+              <i class="fa fa-question-circle fa-2x tooltipped" aria-hidden="true" style="float: right;" data-position="bottom" data-delay="50" data-tooltip="Essa página permite que você recupere sua senha. Para isso informe sua nova senha e clique em continuar"></i>                            
+              <p class="txt-recuperar">RECUPERAR SENHA</p>  
+              <div style="padding: 20px">
+                  <h5 style="color: #337ab7;">Plataforma de Diagnóstico em <br> GC nas Organizações</h5>
+                  <p><i>desenvolvido no PGCCO da UniCesumar</i></p>
+              </div>
+            </div>
+            <div class="card-action">
+              <div class="input-field col s12">
+                <input id="email" type="text" class="validate">
+                <label for="email">DIGITE NOVA SENHA</label>
+              </div>
+              <div>
+                  <p>Média</p>
+                </div>
+              <div class="progress pg-custom">
+                <div class="determinate" style="width: 70%"></div>
+              </div>
+              <div class="input-field col s12">
+                <input id="email" type="text" class="validate">
+                <label for="email">CONFIRMAÇÃO DE SENHA</label>
+              </div>
+              <a class="waves-effect waves-light btn btn-submit-enviar cor-padrao" href="cadastrar_organizacoes.html">CONTINUAR</a>              
+            </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/materialize.js"></script>
+    <script src="assets/js/init.js"></script>
+    
+  </body>
+  </html>
+  

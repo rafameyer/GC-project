@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Alterar Senha</title>
+  
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <style>
+    .input-field input:focus + label {
+    color: #337ab7 !important;
+    }
+    /* label underline focus color */
+    .row .input-field input:focus {
+      border-bottom: 1px solid #337ab7 !important;
+      box-shadow: 0 1px 0 0 #337ab7 !important;
+    } 
+    body {
+      background-color: #337ab7;
+    }
+    .box-login {
+      width: 30%;
+      text-align: center;
+      padding-top: 75px;
+      z-index: 9999;
+    }
+    .card {
+      height: 400px;
+    }
+    .img-logo {
+      width: 250px;
+    }
+    .btn-submit-enviar {
+      width: 100%;
+      margin-top: 10px;
+    }
+    .btn-recuperar-senha {
+        margin-top: 15px;
+        color: #9e9e9e !important;
+    }
+    .txt-recuperar {
+      color: gray;
+    }    
+    .cor-padrao {
+      background-color: #337ab7;
+    }
+    .cor-padrao a:focus {
+      background-color: #337ab7;
+    }
+    .pg-custom {
+      width: 94%;
+      background-color: lightgray;
+    }
+    .progress .determinate {
+      padding: 0;
+    }
+    .btn:hover, .btn-large:hover {
+      background-color: #337ab7;
+    }
+    @media only screen and (max-width: 1024px) {
+      .box-login {
+        width: 70%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="container box-login">
+      <div class="row">
+        <div align="center">
+          <div class="card">
+            <div class="card-content txt-recuperar">
+              <a href="index.html">
+                <i class="material-icons tooltipped" aria-hidden="true" style="float: right;" data-position="bottom" data-delay="50" data-tooltip="Voltar para a tela de Login!">close</i>  
+              </a>
+              <p class="txt-recuperar">ALTERAR SENHA</p>  
+              <div style="padding: 20px">
+                  <h5 style="color: #337ab7;">Plataforma de Diagnóstico em <br> GC nas Organizações</h5>
+                  <p><i>desenvolvido no PGCCO da UniCesumar</i></p>
+              </div>
+            </div>
+            <div class="card-action">
+              <div class="input-field col s12">
+                <i class="fa fa-question-circle fa-lg tooltipped" aria-hidden="true" style="float: right; color:#9e9e9e" data-position="bottom" data-delay="50" data-tooltip="Essa funcionalidade permite alterar a senha da sua conta."></i>                                                        
+                <input id="email" type="text" class="validate">
+                <label for="email">DIGITE SENHA ATUAL</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="senha" type="text" class="validate" name="senha" onkeyup="javascript:verifica()">
+                <label for="email">DIGITE NOVA SENHA</label>
+              </div>
+              <div>
+                <p id="titulo_forca_senha"></p>
+              </div>
+              <div id="mostra" class="progress pg-custom">
+                <div id="determinate" class="determinate"></div>
+              </div>
+              <p style="color: gray">Clique em alterar para concluir a ação!</p>
+              <!-- Modal Trigger -->
+              <a class="waves-effect waves-light btn btn-submit-enviar cor-padrao modal-trigger" href="#modal1">ALTERAR</a>              
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal" style="width: 433px; margin-top: 200px;">
+                  <div class="modal-content">
+                    <h4>Confirma alteração da senha?</h4>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="float: left; color: red">Cancelar</a>                      
+                    <a href="cadastrar_departamentos.html" class="modal-action modal-close waves-effect waves-green btn-flat" style="float: right; color: green">Confirmar</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/materialize.js"></script>
+    <script src="assets/js/init.js"></script>
+    <script>   
+        mostra = document.getElementById("mostra");         
+        mostra.style.visibility = "hidden";        
+    </script>
+    <script> 
+      $(document).ready(function(){
+        // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+      });        
+    </script>
+    <script>
+      function verifica(){
+        senha = document.getElementById("senha").value;
+        forca = 0;
+        mostra = document.getElementById("mostra");
+        determinate  = document.getElementById("determinate");
+        titulo_forca_senha = document.getElementById("titulo_forca_senha");
+
+        if((senha.length >= 4) && (senha.length <= 7)){
+          forca += 10;
+        }else if(senha.length>7){
+          forca += 25;
+        }
+        if(senha.match(/[a-z]+/)){
+          forca += 10;
+        }
+        if(senha.match(/[A-Z]+/)){
+          forca += 20;
+        }
+        if(senha.match(/[0-9]+/)){
+          forca += 20;
+        }
+        if(senha.match(/[^a-zA-Z 0-9]+/g)){
+          forca += 25;
+        }
+        
+        return mostra_res();
+      }
+      function mostra_res(){
+        if(forca < 10){
+          determinate.setAttribute("style", "padding: %;");
+          mostra.style.visibility = "hidden";
+          titulo_forca_senha.innerHTML = "";          
+        } else if((forca >= 10) && (forca < 30)){
+          mostra.style.visibility = "visible";          
+          determinate.setAttribute("style", "padding: 5%; background-color: blue");
+          titulo_forca_senha.innerHTML = "Senha Fraca!";
+        }else if((forca >= 30) && (forca < 60)){
+          mostra.style.visibility = "visible";          
+          determinate.setAttribute("style", "padding: 20%; background-color: green");
+          titulo_forca_senha.innerHTML = "Senha Média!";          
+        }else if((forca >= 60) && (forca < 85)){
+          mostra.style.visibility = "visible";          
+          determinate.setAttribute("style", "padding: 40%; background-color: yellow");
+          titulo_forca_senha.innerHTML = "Senha Forte!";          
+        }else{
+          determinate.setAttribute("style", "padding: 56%; background-color: red");
+          titulo_forca_senha.innerHTML = "Excelente!";          
+        }
+      }
+    </script>
+  </body>
+  </html>
+  
